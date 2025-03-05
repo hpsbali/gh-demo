@@ -4,6 +4,13 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - feat
+      - test
+    paths-ignore:
+        .github/workflows/demo1.yml
 jobs:
   deploy:
     runs-on: ubuntu-latest
